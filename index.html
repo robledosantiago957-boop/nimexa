@@ -1,779 +1,968 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="facebook-domain-verification" content="xzsnvnaxzpbc12rys76mpdbozu124j" />
-  <title>Elisalde Hnos - Servicios Profesionales</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;600;700;800;900&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    
-    .poppins {
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta name="facebook-domain-verification" content="uerjt53jf4mz3mq0dbayhcu1ep9yj2" />
+    <title>Nimexa - Soluciones Empresariales de Vanguardia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .fredoka {
-      font-family: 'Fredoka', sans-serif;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            overflow-x: hidden;
+        }
 
-    /* Elisalde Hnos Blue/Teal Theme */
-    .shine-bg {
-      background: linear-gradient(135deg, #0EA5E9 0%, #22D3EE 25%, #67E8F9 50%, #BAE6FD 75%, #ECFEFF 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .shine-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: 
-        radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(103, 232, 249, 0.2) 0%, transparent 50%);
-      opacity: 0.8;
-      z-index: 1;
-    }
-    
-    .shine-content {
-      position: relative;
-      z-index: 2;
-    }
-    
-    /* Blue/Teal color scheme */
-    .text-purple {
-      color: #0EA5E9; /* repurposed */
-    }
-    
-    .text-light-purple {
-      color: #22D3EE; /* repurposed */
-    }
-    
-    .text-pink {
-      color: #14B8A6; /* repurposed */
-    }
-    
-    .text-white-title {
-      color: #FFFFFF;
-      font-weight: 900;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    /* Modern cards with sparkle effect */
-    .shine-card {
-      background: linear-gradient(145deg, rgba(14, 165, 233, 0.9), rgba(34, 211, 238, 0.2));
-      border: 2px solid #0EA5E9;
-      backdrop-filter: blur(20px);
-      box-shadow: 
-        0 0 30px rgba(14, 165, 233, 0.3),
-        inset 0 0 30px rgba(14, 165, 233, 0.1);
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .shine-card::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(45deg, #0EA5E9, #22D3EE, #14B8A6, #0EA5E9);
-      background-size: 400% 400%;
-      animation: sparkleGlow 3s ease infinite;
-      z-index: -1;
-      border-radius: inherit;
-    }
-    
-    .shine-card:hover {
-      transform: translateY(-15px) scale(1.03);
-      box-shadow: 
-        0 25px 50px rgba(14, 165, 233, 0.4),
-        0 0 40px rgba(34, 211, 238, 0.3);
-      border-color: #22D3EE;
-    }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s infinite linear;
+        }
 
-    @keyframes sparkleGlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
 
-    /* Sparkle icons */
-    .shine-icon {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(45deg, #0EA5E9, #22D3EE);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
-    }
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 60px 0;
+        }
 
-    /* Fun grid pattern */
-    .sparkle-bg {
-      background-image: 
-        linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
-      background-size: 40px 40px;
-      position: relative;
-    }
-    
-    .sparkle-bg::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 25% 25%, rgba(34, 211, 238, 0.2) 2px, transparent 2px),
-        radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.2) 2px, transparent 2px);
-      background-size: 40px 40px;
-    }
+        .logo {
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            background: linear-gradient(45deg, #ffffff, #f0f4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255,255,255,0.3);
+        }
 
-    /* Bouncy animations */
-    .bounce-animation {
-      animation: bounce 2s ease-in-out infinite;
-    }
-    
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
+        .logo-subtitle {
+            font-size: 1.6rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: #e8f2ff;
+        }
 
-    /* Sparkle pulse */
-    .pulse-purple {
-      animation: pulseSparkle 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulseSparkle {
-      0%, 100% { 
-        box-shadow: 0 0 20px #0EA5E9, 0 0 40px #0EA5E9;
-        border-color: #0EA5E9;
-      }
-      50% { 
-        box-shadow: 0 0 30px #22D3EE, 0 0 60px #22D3EE;
-        border-color: #22D3EE;
-      }
-    }
+        .tagline {
+            font-size: 1.3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0.95;
+            color: #f0f4ff;
+        }
 
-    /* Fun panels */
-    .fun-panel {
-      background: linear-gradient(135deg, rgba(14, 165, 233, 0.8) 0%, rgba(34, 211, 238, 0.3) 100%);
-      border-left: 4px solid #0EA5E9;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    
-    .fun-panel:hover {
-      transform: translateX(10px) rotate(1deg);
-      border-left-color: #22D3EE;
-      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);
-    }
+        .cta-buttons {
+            margin-top: 50px;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    /* Rainbow wave effect */
-    .rainbow-wave {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 98px,
-        rgba(14, 165, 233, 0.05) 100px
-      );
-      animation: rainbowFlow 15s linear infinite;
-    }
-    
-    @keyframes rainbowFlow {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
+        .btn {
+            padding: 18px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
 
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: #0EA5E9;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(to bottom, #0EA5E9, #22D3EE);
-      border-radius: 5px;
-    }
+        .btn-primary {
+            background: linear-gradient(45deg, #f59e0b, #ef4444);
+            color: white;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
 
-    /* WhatsApp button with sparkle */
-    .whatsapp-sparkle {
-      background: linear-gradient(135deg, #25d366, #128c7e, #0EA5E9);
-      animation: sparklePulse 2s infinite;
-      border: 2px solid #0EA5E9;
-      box-shadow: 0 0 25px rgba(14, 165, 233, 0.5);
-    }
-    
-    @keyframes sparklePulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 25px rgba(14, 165, 233, 0.5);
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 35px rgba(34, 211, 238, 0.7);
-      }
-    }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.6);
+        }
 
-    /* Fun typing effect */
-    .fun-typing {
-      overflow: hidden;
-      border-right: 3px solid #0EA5E9;
-      white-space: nowrap;
-      animation: typing 4s steps(50, end), blink-cursor 0.75s step-end infinite;
-    }
-    
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    
-    @keyframes blink-cursor {
-      from, to { border-color: transparent; }
-      50% { border-color: #0EA5E9; }
-    }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
 
-    /* Fun button effects */
-    .btn-shine {
-      background: linear-gradient(135deg, #0EA5E9, #22D3EE);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .btn-shine::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-    
-    .btn-shine:hover::before {
-      left: 100%;
-    }
-    
-    .btn-shine:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(14, 165, 233, 0.4);
-    }
+        .btn-secondary:hover {
+            background: white;
+            color: #0ea5e9;
+            transform: translateY(-3px);
+        }
 
-    /* Floating sparkles */
-    .sparkle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #F3E8FF;
-      border-radius: 50%;
-      animation: sparkleFloat 3s ease-in-out infinite;
-    }
+        /* Navigation */
+        nav {
+            background: rgba(14, 165, 233, 0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+        }
 
-    @keyframes sparkleFloat {
-      0%, 100% { 
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0.7;
-      }
-      50% { 
-        transform: translateY(-20px) rotate(180deg);
-        opacity: 1;
-      }
-    }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    /* Fun emoji animations */
-    .emoji-bounce {
-      animation: emojiBounce 1.5s ease-in-out infinite;
-    }
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 2px;
+        }
 
-    @keyframes emojiBounce {
-      0%, 100% { transform: scale(1) rotate(0deg); }
-      25% { transform: scale(1.1) rotate(5deg); }
-      75% { transform: scale(1.1) rotate(-5deg); }
-    }
-  </style>
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.2);
+            color: #f0f4ff;
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0ea5e9;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #64748b;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #475569;
+            text-align: justify;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #0ea5e9;
+            margin-bottom: 15px;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8fafc, #ffffff);
+            padding: 50px 40px;
+            border-radius: 25px;
+            border-top: 6px solid #0ea5e9;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #0ea5e9, #06b6d4);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: #0ea5e9;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            color: #0ea5e9;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            color: #475569;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1rem;
+        }
+
+        .service-list li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+            color: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .team-member {
+            background: rgba(255,255,255,0.1);
+            padding: 45px 35px;
+            border-radius: 25px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .team-member img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 5px solid rgba(255,255,255,0.3);
+        }
+
+        .team-member h4 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .team-member .position {
+            color: #e8f2ff;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .team-member .quote {
+            font-style: italic;
+            color: #f0f4ff;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            color: #0ea5e9;
+            font-weight: 700;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .contact-item i {
+            color: #0ea5e9;
+            margin-right: 25px;
+            margin-top: 5px;
+            width: 30px;
+            font-size: 1.4rem;
+        }
+
+        .contact-item span {
+            line-height: 1.6;
+            color: #475569;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .business-hours {
+            background: white;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .business-hours h4 {
+            color: #0ea5e9;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .business-hours p {
+            margin-bottom: 18px;
+            line-height: 1.6;
+            color: #475569;
+            font-size: 1.1rem;
+        }
+
+        .business-hours strong {
+            color: #0ea5e9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 70px 0;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            color: white;
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 3.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .header-content {
+                padding: 50px 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Additional modern styling */
+        .highlight-text {
+            color: #0ea5e9;
+            font-weight: 700;
+        }
+
+        .mission-section {
+            background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+            color: white;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .mission-section h3 {
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .mission-section p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        /* New modern elements */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            animation: float-circle 15s infinite linear;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float-circle {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-white overflow-x-hidden">
-
-  <!-- RAINBOW WAVE BACKGROUND -->
-  <div class="rainbow-wave fixed inset-0 pointer-events-none z-0"></div>
-
-  <!-- SPARKLE HEADER -->
-  <header class="shine-bg min-h-screen flex items-center relative">
-    <div class="shine-content w-full">
-      
-      <!-- Fun Navigation -->
-      <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-xl border-b-2 border-purple-600">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-          <div class="flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center">
-              <div class="shine-icon mr-4 pulse-purple">
-                <div class="text-white font-bold text-2xl emoji-bounce">✨</div>
-              </div>
-              <span class="text-2xl font-black fredoka text-white-title">Elisalde Hnos</span>
-            </div>
-            
-            <!-- Menu -->
-            <ul class="hidden md:flex space-x-8 text-purple-400 font-bold fredoka">
-              <li><a href="#inicio" class="hover:text-purple-600 transition duration-300 relative group">
-                  INICIO
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </a></li>
-              <li><a href="#nosotros" class="hover:text-purple-600 transition duration-300 relative group">
-                  NOSOTROS
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </a></li>
-              <li><a href="#servicios" class="hover:text-purple-600 transition duration-300 relative group">
-                  SERVICIOS
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </a></li>
-              <li><a href="#contacto" class="hover:text-purple-600 transition duration-300 relative group">
-                  CONTACTO
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </a></li>
-          </ul>
-          </div>
+<body>
+    <!-- Header -->
+    <header id="home">
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
         </div>
-      </nav>
-
-      <!-- Hero Section -->
-      <div class="max-w-7xl mx-auto px-6 py-20 mt-20">
-        <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
-          
-          <!-- Left Content -->
-            <div class="text-center lg:text-left">
-            <div class="mb-8">
-              <h1 class="text-6xl md:text-7xl font-black fredoka bounce-animation mb-4">
-                <span class="text-white-title">Elisalde</span>
-                <br>
-                <span class="text-white-title">Hnos</span>
-              </h1>
-              <div class="fun-typing text-2xl md:text-3xl text-purple-400 font-bold">
-                SOLUCIONES ELÉCTRICAS Y SERVICIOS INTEGRALES
-              </div>
-              </div>
-              
-            <!-- Feature Stats -->
-            <div class="grid grid-cols-2 gap-6 mb-12">
-              <div class="shine-card p-6 rounded-xl">
-                <div class="text-4xl text-purple mb-2 fredoka font-black">✨</div>
-                <div class="text-gray-300">CALIDAD</div>
-              </div>
-              <div class="shine-card p-6 rounded-xl">
-                <div class="text-4xl text-light-purple mb-2 fredoka font-black">🎉</div>
-                <div class="text-gray-300">RAPIDEZ</div>
-              </div>
-              <div class="shine-card p-6 rounded-xl">
-                <div class="text-4xl text-pink mb-2 fredoka font-black">💫</div>
-                <div class="text-gray-300">SEGURIDAD</div>
-              </div>
-              <div class="shine-card p-6 rounded-xl">
-                <div class="text-4xl text-purple mb-2 fredoka font-black">🌟</div>
-                <div class="text-gray-300">GARANTÍA</div>
-              </div>
-            </div>
-
-            <!-- CTA Button -->
-            <button class="btn-shine px-12 py-6 rounded-xl text-xl font-bold fredoka text-white border-2 border-purple-600 transition-all duration-300">
-              PEDIR PRESUPUESTO
-            </button>
-          </div>
-
-          <!-- Right Content - Fun Image -->
-            <div class="relative">
-            <div class="shine-card p-8 rounded-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1581091014534-7d96968bdd3e?q=80&w=2126&auto=format&fit=crop" 
-                alt="Elisalde Hnos - Servicios eléctricos" 
-                class="w-full h-96 object-cover rounded-lg"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-sky-600/20 via-transparent to-cyan-400/20 rounded-2xl"></div>
-              </div>
-            
-            <!-- Floating sparkles -->
-            <div class="absolute -top-6 -right-6 shine-icon pulse-purple">
-              <div class="text-white font-bold text-xl emoji-bounce">✨</div>
-              </div>
-            <div class="absolute -bottom-6 -left-6 shine-icon pulse-purple" style="animation-delay: 1s;">
-              <div class="text-white font-bold text-xl emoji-bounce">🎨</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ABOUT SECTION - FUN GRID DESIGN -->
-  <section id="nosotros" class="sparkle-bg py-32 bg-slate-800 relative">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-20">
-        <h2 class="text-6xl font-black fredoka text-purple bounce-animation mb-8">QUIÉNES SOMOS</h2>
-        <div class="w-32 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto"></div>
-      </div>
-      
-      <!-- Fun panels layout -->
-      <div class="grid lg:grid-cols-3 gap-8">
-        
-        <!-- Panel 1 -->
-        <div class="fun-panel p-8 rounded-xl">
-          <div class="shine-icon mb-6 mx-auto">
-            <div class="text-white font-bold text-2xl emoji-bounce">🎯</div>
-          </div>
-          <h3 class="text-2xl font-bold fredoka text-purple mb-4">MISIÓN</h3>
-          <p class="text-gray-300">Brindar soluciones eléctricas confiables y seguras para hogares y empresas, con compromiso, rapidez y calidad profesional.</p>
-        </div>
-        
-        <!-- Panel 2 -->
-        <div class="fun-panel p-8 rounded-xl">
-          <div class="shine-icon mb-6 mx-auto">
-            <div class="text-white font-bold text-2xl emoji-bounce">🌈</div>
-            </div>
-          <h3 class="text-2xl font-bold fredoka text-light-purple mb-4">VISIÓN</h3>
-          <p class="text-gray-300">Ser referentes regionales en instalaciones y mantenimiento eléctrico, priorizando seguridad, innovación y atención al cliente.</p>
-        </div>
-
-        <!-- Panel 3 -->
-        <div class="fun-panel p-8 rounded-xl">
-          <div class="shine-icon mb-6 mx-auto">
-            <div class="text-white font-bold text-2xl emoji-bounce">💎</div>
-          </div>
-          <h3 class="text-2xl font-bold fredoka text-pink mb-4">VALORES</h3>
-          <p class="text-gray-300">Seguridad, responsabilidad, transparencia y garantía en cada trabajo realizado.</p>
-        </div>
-      </div>
-      
-      <!-- Central Image -->
-      <div class="flex justify-center mt-16">
-        <div class="shine-card p-6 rounded-2xl">
-          <img 
-            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" 
-            alt="Elisalde Hnos - Equipo técnico" 
-            class="w-full max-w-2xl h-64 object-cover rounded-lg"
-          />
-        </div>
-        </div>
-      </div>
-    </section>
-
-  <!-- SERVICES SECTION - FUN GRID DESIGN -->
-  <section id="servicios" class="bg-slate-900 py-32 relative">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-20">
-        <h2 class="text-6xl font-black fredoka text-purple bounce-animation mb-8">NUESTROS SERVICIOS</h2>
-        <div class="w-32 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto"></div>
-      </div>
-      
-      <!-- Fun Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Service 1 -->
-        <div class="shine-card p-8 rounded-2xl group">
-          <div class="shine-icon mb-6">
-            <div class="text-white font-bold text-xl emoji-bounce">🎨</div>
-            </div>
-            <img 
-            src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=2070&auto=format&fit=crop" 
-            alt="Instalaciones eléctricas domiciliarias" 
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-bold fredoka text-purple mb-4">INSTALACIONES DOMICILIARIAS</h3>
-          <p class="text-gray-300 mb-4">Proyectos y ejecución de instalaciones eléctricas conforme normas, tableros, cableado y puesta a tierra.</p>
-          <div class="flex items-center text-purple-400">
-            <span class="mr-2">✨</span>
-            <span class="text-sm font-bold">CREATIVIDAD SIN LÍMITES</span>
-          </div>
-          </div>
-        
-        <!-- Service 2 -->
-        <div class="shine-card p-8 rounded-2xl group">
-          <div class="shine-icon mb-6">
-            <div class="text-white font-bold text-xl emoji-bounce">🎉</div>
-          </div>
-          <img 
-            src="https://images.unsplash.com/photo-1581091215367-59ab6d1f3d6b?q=80&w=2070&auto=format&fit=crop" 
-            alt="Mantenimiento eléctrico" 
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-bold fredoka text-light-purple mb-4">MANTENIMIENTO</h3>
-          <p class="text-gray-300 mb-4">Correctivo y preventivo para evitar fallas, con diagnóstico rápido y repuestos garantizados.</p>
-          <div class="flex items-center text-purple-500">
-            <span class="mr-2">🎊</span>
-            <span class="text-sm font-bold">MOMENTOS INOLVIDABLES</span>
-          </div>
-      </div>
-      
-        <!-- Service 3 -->
-        <div class="shine-card p-8 rounded-2xl group">
-          <div class="shine-icon mb-6">
-            <div class="text-white font-bold text-xl emoji-bounce">💫</div>
-          </div>
-          <img 
-            src="https://images.unsplash.com/photo-1581093588401-8a5b0591754c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Iluminación LED" 
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-bold fredoka text-pink mb-4">ILUMINACIÓN LED</h3>
-          <p class="text-gray-300 mb-4">Diseño y montaje de iluminación eficiente para hogares, comercios y exteriores.</p>
-          <div class="flex items-center text-purple-400">
-            <span class="mr-2">🌟</span>
-            <span class="text-sm font-bold">ESTILO PERSONALIZADO</span>
-          </div>
-          </div>
-          
-        <!-- Service 4 -->
-        <div class="shine-card p-8 rounded-2xl group">
-          <div class="shine-icon mb-6">
-            <div class="text-white font-bold text-xl emoji-bounce">🎭</div>
-          </div>
-          <img 
-            src="https://images.unsplash.com/photo-1581092917398-4c4c8469a8df?q=80&w=2134&auto=format&fit=crop" 
-            alt="Tableros y protecciones" 
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-bold fredoka text-purple mb-4">TABLEROS Y PROTECCIONES</h3>
-          <p class="text-gray-300 mb-4">Armado y adecuación de tableros, disyuntores, térmicas y protecciones contra sobretensión.</p>
-          <div class="flex items-center text-purple-400">
-            <span class="mr-2">🎨</span>
-            <span class="text-sm font-bold">APRENDER DIVIRTIÉNDOSE</span>
-          </div>
-          </div>
-          
-        <!-- Service 5 -->
-        <div class="shine-card p-8 rounded-2xl group">
-          <div class="shine-icon mb-6">
-            <div class="text-white font-bold text-xl emoji-bounce">📸</div>
-          </div>
-          <img 
-            src="https://images.unsplash.com/photo-1581092160562-40aa08e78838?q=80&w=2015&auto=format&fit=crop" 
-            alt="Cableado de datos y cámaras" 
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-bold fredoka text-light-purple mb-4">DATOS Y CCTV</h3>
-          <p class="text-gray-300 mb-4">Tendido de cableado estructurado, canalizaciones y colocación de cámaras de seguridad.</p>
-          <div class="flex items-center text-purple-500">
-            <span class="mr-2">📷</span>
-            <span class="text-sm font-bold">RECUERDOS ÚNICOS</span>
-          </div>
-          </div>
-          
-        <!-- Service 6 -->
-        <div class="shine-card p-8 rounded-2xl group">
-          <div class="shine-icon mb-6">
-            <div class="text-white font-bold text-xl emoji-bounce">🎁</div>
-          </div>
-          <img 
-            src="https://images.unsplash.com/photo-1581090700227-1a9c9f1b1f6d?q=80&w=2070&auto=format&fit=crop" 
-            alt="Mediciones y certificaciones" 
-            class="w-full h-48 object-cover rounded-lg mb-6"
-          />
-          <h3 class="text-2xl font-bold fredoka text-pink mb-4">MEDICIONES</h3>
-          <p class="text-gray-300 mb-4">Mediciones de aislamiento, continuidad, puesta a tierra y emisión de informes.</p>
-          <div class="flex items-center text-purple-400">
-            <span class="mr-2">💎</span>
-            <span class="text-sm font-bold">PRODUCTOS ÚNICOS</span>
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  <!-- TESTIMONIALS - FUN DESIGN -->
-  <section class="shine-bg py-32 relative">
-      <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-20">
-        <h2 class="text-6xl font-black fredoka text-light-purple bounce-animation mb-8">OPINIONES DE CLIENTES</h2>
-        <div class="w-32 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto"></div>
-            </div>
-      
-      <!-- Fun testimonials -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div class="shine-card p-8 rounded-2xl">
-              <div class="flex items-center mb-6">
-                <img 
-              class="w-16 h-16 rounded-full border-4 border-purple-400 mr-4" 
-              src="https://randomuser.me/api/portraits/women/32.jpg" 
-              alt="Sofía Martínez"
-            />
-            <div>
-              <h4 class="font-bold fredoka text-purple text-lg">Sofía Martínez</h4>
-              <p class="text-purple-400 text-sm">Cliente Feliz</p>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">NIMEXA</h1>
+                <p class="logo-subtitle">Soluciones Empresariales de Vanguardia</p>
+                <p class="tagline">Revolucionamos el futuro empresarial. Nimexa es tu aliado estratégico para el crecimiento exponencial, ofreciendo soluciones innovadoras que transforman ideas en realidades exitosas con tecnología de última generación y experiencia comprobada.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Contáctanos</a>
+                    <a href="#services" class="btn btn-secondary">Nuestros Servicios</a>
                 </div>
-              </div>
-          <p class="text-gray-300 italic">"Trabajo impecable, rápido y seguro. Recomiendo a Elisalde Hnos para instalaciones y mantenimiento."</p>
-              <div class="flex mt-4">
-            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
-              </div>
             </div>
-
-        <div class="shine-card p-8 rounded-2xl">
-              <div class="flex items-center mb-6">
-                <img 
-              class="w-16 h-16 rounded-full border-4 border-pink-400 mr-4" 
-              src="https://randomuser.me/api/portraits/men/42.jpg" 
-              alt="Diego Rodríguez"
-            />
-            <div>
-              <h4 class="font-bold fredoka text-light-purple text-lg">Diego Rodríguez</h4>
-              <p class="text-purple-400 text-sm">Cliente Satisfecho</p>
-                </div>
-              </div>
-          <p class="text-gray-300 italic">"Excelente atención y resultados. Dejaron todo funcionando perfecto y ordenado."</p>
-              <div class="flex mt-4">
-            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
-              </div>
-            </div>
-
-        <div class="shine-card p-8 rounded-2xl">
-              <div class="flex items-center mb-6">
-                <img 
-              class="w-16 h-16 rounded-full border-4 border-purple-500 mr-4" 
-              src="https://randomuser.me/api/portraits/women/24.jpg" 
-              alt="Lucía Fernández"
-            />
-            <div>
-              <h4 class="font-bold fredoka text-pink text-lg">Lucía Fernández</h4>
-              <p class="text-purple-400 text-sm">Cliente Encantada</p>
-            </div>
-          </div>
-          <p class="text-gray-300 italic">"Muy profesionales. Explicaron cada paso y cumplieron con los tiempos."</p>
-          <div class="flex mt-4">
-            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
-          </div>
         </div>
-      </div>
-      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">NIMEXA</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#team">Equipo</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir Nimexa?</h2>
+            <p class="section-subtitle">Innovación disruptiva, experiencia excepcional y resultados que superan expectativas</p>
+            
+            <div class="about-content">
+                <div>
+                    <p class="about-text">
+                        Nimexa es una empresa pionera en soluciones empresariales de vanguardia, especializada en revolucionar el futuro empresarial. Con una trayectoria sólida en el mercado, hemos desarrollado un enfoque único que combina tecnología de última generación con estrategias innovadoras para impulsar el crecimiento exponencial de nuestros clientes.
+                    </p>
+                    <p class="about-text">
+                        Nuestro equipo de expertos trabaja incansablemente para ofrecer soluciones integrales que se adaptan perfectamente a las necesidades específicas de cada empresa. En Nimexa, creemos que cada proyecto es una oportunidad para crear algo extraordinario y transformar el futuro empresarial.
+                    </p>
+                    <div class="mission-section">
+                        <h3>Nuestra Misión</h3>
+                        <p>Ser el socio estratégico de vanguardia que impulse el crecimiento exponencial empresarial a través de soluciones innovadoras, tecnología de última generación y un servicio excepcional que supere todas las expectativas de nuestros clientes.</p>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">750+</div>
+                        <div class="stat-label">Proyectos Exitosos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Satisfacción del Cliente</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Soporte Premium</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-  <!-- CONTACT FOOTER - FUN DESIGN -->
-  <footer id="contacto" class="bg-slate-900 text-white py-20 border-t-2 border-purple-600">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-12 mb-16">
-        
-        <!-- Company Info -->
-        <div class="md:col-span-1">
-          <div class="flex items-center mb-8">
-            <div class="shine-icon mr-4 pulse-purple">
-              <div class="text-white font-bold text-xl emoji-bounce">✨</div>
-            </div>
-            <h3 class="text-4xl font-bold fredoka text-white-title">Elisalde Hnos</h3>
-          </div>
-          <p class="text-gray-300 mb-8 text-lg leading-relaxed">
-Servicios eléctricos y mantenimiento integral para hogares y comercios. Trabajos seguros, rápidos y con garantía.
-          </p>
-          <div class="flex space-x-4">
-            <div class="w-12 h-12 shine-card rounded-full flex items-center justify-center">
-              <span class="text-purple-400 emoji-bounce">✨</span>
-            </div>
-            <div class="w-12 h-12 shine-card rounded-full flex items-center justify-center">
-              <span class="text-purple-500 emoji-bounce">🎨</span>
-            </div>
-            <div class="w-12 h-12 shine-card rounded-full flex items-center justify-center">
-              <span class="text-purple-600 emoji-bounce">🎉</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-2xl font-bold fredoka text-light-purple mb-8">CONTACTO DIRECTO</h4>
-          <div class="space-y-6 text-gray-300">
-            <div class="flex items-start space-x-4">
-              <div class="shine-icon">
-                <div class="text-white text-sm">📍</div>
-              </div>
-              <span>Italia 973, San Miguel</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="shine-icon">
-                <div class="text-white text-sm">📞</div>
-              </div>
-              <a href="tel:+5491164652031" class="hover:text-purple-400 transition text-lg font-bold fredoka">+5491164652031</a>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="shine-icon">
-                <div class="text-white text-sm">✉️</div>
-              </div>
-              <a href="mailto:contacto@elisaldehnos.com" class="hover:text-purple-400 transition">contacto@elisaldehnos.com</a>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="shine-icon">
-                <div class="text-white text-sm">🏢</div>
-              </div>
-              <span>CUIL: 20381244602</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Operating Hours -->
-        <div>
-          <h4 class="text-2xl font-bold fredoka text-purple-400 mb-8">HORARIOS DE ATENCIÓN</h4>
-          <div class="space-y-4 text-gray-300">
-            <div class="shine-card p-4 rounded-lg">
-              <p class="font-bold text-purple-400 mb-2 fredoka">OFICINA</p>
-              <p>Lun-Vie: 09:00-18:00</p>
-              <p>Sáb: 10:00-14:00</p>
-            </div>
-            <div class="shine-card p-4 rounded-lg">
-              <p class="font-bold text-purple-500 mb-2 fredoka">EVENTOS</p>
-              <p>Disponible 24/7</p>
-              <p>Para momentos especiales</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="border-t-2 border-purple-600 pt-12 text-center">
-        <div class="shine-icon mx-auto mb-6 pulse-purple">
-          <div class="text-white font-bold text-xl emoji-bounce">✨</div>
-        </div>
-        <p class="text-purple-400 mb-3 text-xl font-bold fredoka">Elisalde Hnos - Soluciones Eléctricas</p>
-        <p class="text-gray-400">© 2024 Todos los derechos reservados | Crea momentos mágicos</p>
-      </div>
-    </div>
-  </footer>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Soluciones integrales de vanguardia para impulsar tu negocio al siguiente nivel</p>
 
-  <!-- FUN WHATSAPP BUTTON -->
-  <a 
-    href="https://wa.me/5491164652031?text=¡Hola%20Elisalde%20Hnos!%20Me%20gustaría%20pedir%20un%20presupuesto%20para%20un%20trabajo%20eléctrico." 
-    target="_blank"
-    class="fixed bottom-8 right-8 whatsapp-sparkle text-white p-6 rounded-full shadow-2xl z-50 transition-all duration-300 hover:scale-110 group"
-    aria-label="Contactar por WhatsApp"
-  >
-    <div class="relative">
-      <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-      </svg>
-      <!-- Fun notification -->
-      <div class="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-xs font-bold pulse-purple">
-        ✨
-      </div>
-    </div>
-  </a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Desarrollo de Software Avanzado</h3>
+                    <p>Creamos aplicaciones web y móviles de última generación que se adaptan perfectamente a las necesidades más complejas de tu empresa.</p>
+                    <ul class="service-list">
+                        <li>Aplicaciones web de vanguardia</li>
+                        <li>Desarrollo móvil nativo avanzado</li>
+                        <li>Sistemas de gestión empresarial inteligentes</li>
+                        <li>E-commerce personalizado de alta gama</li>
+                        <li>APIs y microservicios avanzados</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Consultoría Estratégica Avanzada</h3>
+                    <p>Optimizamos tus procesos empresariales con estrategias revolucionarias que generan resultados medibles y crecimiento exponencial.</p>
+                    <ul class="service-list">
+                        <li>Análisis de procesos avanzado</li>
+                        <li>Optimización operativa inteligente</li>
+                        <li>Estrategias de crecimiento exponencial</li>
+                        <li>Transformación digital completa</li>
+                        <li>Gestión del cambio estratégica</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Soluciones en la Nube Premium</h3>
+                    <p>Migramos y optimizamos tu infraestructura tecnológica para máxima eficiencia, seguridad y escalabilidad empresarial.</p>
+                    <ul class="service-list">
+                        <li>Migración a la nube avanzada</li>
+                        <li>Infraestructura como servicio premium</li>
+                        <li>Backup y recuperación inteligente</li>
+                        <li>Seguridad avanzada de última generación</li>
+                        <li>Monitoreo 24/7 con IA</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Capacitación y Desarrollo Avanzado</h3>
+                    <p>Formamos a tu equipo con las habilidades más avanzadas para enfrentar los desafíos del futuro empresarial.</p>
+                    <ul class="service-list">
+                        <li>Capacitación técnica de vanguardia</li>
+                        <li>Desarrollo de liderazgo estratégico</li>
+                        <li>Metodologías ágiles avanzadas</li>
+                        <li>Certificaciones profesionales premium</li>
+                        <li>Mentoría personalizada de expertos</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Ciberseguridad de Vanguardia</h3>
+                    <p>Protegemos tu información y sistemas con las mejores prácticas de seguridad del mercado y tecnología de última generación.</p>
+                    <ul class="service-list">
+                        <li>Auditorías de seguridad avanzadas</li>
+                        <li>Implementación de protocolos premium</li>
+                        <li>Monitoreo de amenazas con IA</li>
+                        <li>Capacitación en seguridad empresarial</li>
+                        <li>Respuesta a incidentes 24/7</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte Técnico Premium</h3>
+                    <p>Brindamos soporte continuo de alta calidad para garantizar el funcionamiento óptimo de todos tus sistemas empresariales.</p>
+                    <ul class="service-list">
+                        <li>Soporte 24/7 premium</li>
+                        <li>Mantenimiento preventivo avanzado</li>
+                        <li>Resolución de incidencias rápida</li>
+                        <li>Actualizaciones de software automáticas</li>
+                        <li>Consultoría técnica especializada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Nuestro Equipo</h2>
+            <p class="section-subtitle" style="color: #e8f2ff;">Profesionales expertos de vanguardia comprometidos con tu éxito</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" alt="Director Nimexa">
+                    <h4>Equipo Nimexa</h4>
+                    <p class="position">Director General</p>
+                    <p class="quote">"En Nimexa, revolucionamos el futuro empresarial con soluciones innovadoras que impulsan el crecimiento exponencial y la transformación digital."</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face" alt="Gerente de Proyectos">
+                    <h4>Equipo Profesional</h4>
+                    <p class="position">Gerente de Proyectos</p>
+                    <p class="quote">"Cada proyecto en Nimexa es una oportunidad para crear valor excepcional y superar expectativas con soluciones de vanguardia."</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face" alt="Especialista en Tecnología">
+                    <h4>Equipo Técnico</h4>
+                    <p class="position">Especialista en Tecnología</p>
+                    <p class="quote">"La tecnología de vanguardia es nuestro aliado para crear soluciones que transforman la manera de hacer negocios en el futuro."</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" alt="Consultora Senior">
+                    <h4>Equipo Consultor</h4>
+                    <p class="position">Consultora Senior</p>
+                    <p class="quote">"En Nimexa, cada cliente es único. Desarrollamos estrategias personalizadas de vanguardia para maximizar su potencial empresarial."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte a alcanzar tus objetivos empresariales de vanguardia</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Magallanes 6221, Mar Del Plata<br>Buenos Aires, Argentina</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+5491164727903</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@nimexa.com.ar</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>CUIL: 23437797919</span>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="business-hours">
+                        <h4>Horarios de Atención</h4>
+                        <p><strong>Días de atención:</strong></p>
+                        <p>Lunes a Viernes: 9:00 a 18:00 hs</p>
+                        <p>Sábados: 9:00 a 13:00 hs</p>
+                        <br>
+                        <p><strong>Soporte técnico premium:</strong></p>
+                        <p>Disponible 24/7</p>
+                        <p>WhatsApp: +5491164727903</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nimexa. Todos los derechos reservados</p>
+            <p>Soluciones empresariales de vanguardia para el crecimiento exponencial de tu negocio</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scrolling effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(14, 165, 233, 0.98)';
+            } else {
+                nav.style.background = 'rgba(14, 165, 233, 0.95)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .team-member, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491164727903?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Nimexa" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
